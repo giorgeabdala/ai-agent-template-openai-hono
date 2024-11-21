@@ -1,0 +1,35 @@
+{
+  "name": "ai-agent-openai-template",
+  "version": "0.0.1",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup --config tsup.config.ts",
+    "test": "vitest",
+    "vitest": "vitest",
+    "dev": "tsx watch src/index.ts",
+    "set-secrets": "tsx scripts/setSecrets.ts",
+    "lint": "tsc --noEmit",
+    "publish-agent": "phat-fn build --experimentalAsync && tsx scripts/publish.ts"
+  },
+  "devDependencies": {
+    "@phala/fn": "^0.2.22",
+    "blakejs": "^1.2.1",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.5",
+    "js-sha3": "^0.9.3",
+    "thirdweb": "^5.32.3",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3",
+    "vitest": "^2.1.5",
+    "wyhash": "^1.0.0"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "hono": "^4.6.11",
+    "openai": "^4.56.0",
+    "tsup": "^8.3.5"
+  }
+}
